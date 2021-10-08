@@ -61,8 +61,6 @@ public class UserService {
 
     public UserDto update(UserDto userDto) {
         findById(userDto.getId());
-        //TODO UPDATE
-
         return create(userDto);
     }
 

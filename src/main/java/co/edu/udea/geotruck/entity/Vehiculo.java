@@ -5,12 +5,16 @@
  */
 package co.edu.udea.geotruck.entity;
 
+import lombok.*;
+
 import javax.persistence.*;
 
 /**
  * @author JOAN
  */
-
+@Data
+@Builder
+@AllArgsConstructor
 @Entity
 @Table(name = "vehiculos")
 public class Vehiculo {
@@ -46,80 +50,4 @@ public class Vehiculo {
     public Vehiculo() {
     }
 
-    public Vehiculo(String placa, String tipo, String marca, int modelo, int capacidad, String color, String latitud, String longitud) {
-        this.placa = placa;
-        this.tipo = tipo;
-        this.marca = marca;
-        this.modelo = modelo;
-        this.capacidad = capacidad;
-        this.color = color;
-        this.latitud = latitud;
-        this.longitud = longitud;
-    }
-
-    public String getPlaca() {
-        return placa;
-    }
-
-    public void setPlaca(String placa) {
-        this.placa = placa;
-    }
-
-    public String getTipo() {
-        return tipo;
-    }
-
-    public void setTipo(String tipo) {
-        this.tipo = tipo;
-    }
-
-    public String getMarca() {
-        return marca;
-    }
-
-    public void setMarca(String marca) {
-        this.marca = marca;
-    }
-
-    public int getModelo() {
-        return modelo;
-    }
-
-    public void setModelo(int modelo) {
-        this.modelo = modelo;
-    }
-
-    public int getCapacidad() {
-        return capacidad;
-    }
-
-    public void setCapacidad(int capacidad) {
-        this.capacidad = capacidad;
-    }
-
-    public String getColor() {
-        return color;
-    }
-
-    public void setColor(String color) {
-        this.color = color;
-    }
-
-    public String getLatitud() {
-        return latitud;
-    }
-
-    public void setLatitud(String latitud) {
-        this.latitud = latitud;
-    }
-
-    public String getLongitud() {
-        return longitud;
-    }
-
-    public void setLongitud(String longitud) {
-        this.longitud = longitud;
-    }
-
-    
 }

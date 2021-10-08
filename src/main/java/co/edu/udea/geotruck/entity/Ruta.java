@@ -5,6 +5,7 @@
  */
 package co.edu.udea.geotruck.entity;
 
+import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 
@@ -16,6 +17,7 @@ import javax.persistence.*;
  */
 @Data
 @Builder
+@AllArgsConstructor
 @Entity
 @Table(name = "users")
 public class Ruta {

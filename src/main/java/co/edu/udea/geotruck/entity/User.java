@@ -1,14 +1,16 @@
 package co.edu.udea.geotruck.entity;
 
 
-import lombok.Builder;
-import lombok.Data;
+
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 import javax.persistence.*;
 
-@Data
-@Builder
 @Entity
+@Getter @Setter @NoArgsConstructor @AllArgsConstructor
 @Table(name = "users")
 public class User {
 
@@ -26,10 +28,12 @@ public class User {
     private String password;
 
     @Column
-    private String name;
+    private String nombre;
 
-    public User() {
-    }
+    @Column
+    private String apellido;
+
+
 
 
     @Override
