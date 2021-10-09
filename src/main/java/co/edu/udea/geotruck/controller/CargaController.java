@@ -24,8 +24,8 @@ public class CargaController {
 
     @PostMapping
     public ResponseEntity<CargaDto> create(@RequestBody @Valid CargaDto cargaDTO) {
-        CargaDto personCreate = cargaService.create(cargaDTO);
-        return new ResponseEntity<CargaDto>(personCreate, null, HttpStatus.CREATED);
+        CargaDto cargaCreate = cargaService.create(cargaDTO);
+        return new ResponseEntity<CargaDto>(cargaCreate, null, HttpStatus.CREATED);
     }
 
     @PutMapping

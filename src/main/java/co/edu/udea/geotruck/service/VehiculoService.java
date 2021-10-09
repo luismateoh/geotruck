@@ -3,8 +3,6 @@ package co.edu.udea.geotruck.service;
 
 import co.edu.udea.geotruck.repository.VehiculoRepository;
 import org.modelmapper.ModelMapper;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
 
 import javax.persistence.EntityNotFoundException;
@@ -14,8 +12,6 @@ import java.util.stream.Collectors;
 
 @Service
 public class VehiculoService {
-
-    private static final Logger LOGGER = LoggerFactory.getLogger(VehiculoService.class);
 
     private final VehiculoRepository vehiculoRepository;
 

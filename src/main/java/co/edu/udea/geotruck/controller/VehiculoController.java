@@ -25,8 +25,8 @@ public class VehiculoController {
 
     @PostMapping
     public ResponseEntity<VehiculoDto> create(@RequestBody @Valid VehiculoDto vehiculoDto) {
-        VehiculoDto personCreate = vehiculoService.create(vehiculoDto);
-        return new ResponseEntity<VehiculoDto>(personCreate, null, HttpStatus.CREATED);
+        VehiculoDto vehiculoCreate = vehiculoService.create(vehiculoDto);
+        return new ResponseEntity<VehiculoDto>(vehiculoCreate, null, HttpStatus.CREATED);
     }
 
     @PutMapping

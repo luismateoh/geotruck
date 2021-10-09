@@ -25,8 +25,8 @@ public class RolController {
 
     @PostMapping
     public ResponseEntity<RolDto> create(@RequestBody @Valid RolDto rolDto) {
-        RolDto personCreate = rolService.create(rolDto);
-        return new ResponseEntity<RolDto>(personCreate, null, HttpStatus.CREATED);
+        RolDto rolCreate = rolService.create(rolDto);
+        return new ResponseEntity<RolDto>(rolCreate, null, HttpStatus.CREATED);
     }
 
     @PutMapping

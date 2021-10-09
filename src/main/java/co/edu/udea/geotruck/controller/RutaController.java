@@ -25,7 +25,7 @@ public class RutaController {
 
     @PostMapping
     public ResponseEntity<RutaDto> create(@RequestBody @Valid RutaDto rutaDto) {
-        RutaDto personCreate = rutaService.create(rutaDto);
+        RutaDto rutaCreate = rutaService.create(rutaDto);
         return new ResponseEntity<RutaDto>(personCreate, null, HttpStatus.CREATED);
     }
 
