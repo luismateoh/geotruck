@@ -36,7 +36,7 @@ public class Usuario {
     @OneToMany(mappedBy = "usuario")
     private List<Vehiculo> vehiculos;
 
-    //  @ManyToOne
-    // @JoinColumn(name = "rol_id")
-    // private Rol rol;
+    @ManyToOne
+    @JoinColumn(name = "rol_id")
+    private Rol rol;
 }
