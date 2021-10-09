@@ -9,8 +9,9 @@ import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Pattern;
 import javax.validation.constraints.Size;
 
-@RequiredArgsConstructor
 @Getter
+@Setter
+@NoArgsConstructor
 public class UserDto {
 
     private Long id;
@@ -27,6 +28,7 @@ public class UserDto {
     private String nombre;
 
     private String identificacion;
+
     private String apellido;
 
 }
