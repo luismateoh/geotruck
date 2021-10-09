@@ -15,7 +15,11 @@ import javax.persistence.*;
  *
  * @author JOAN
  */
-@Data
+@Entity
+@Getter 
+@Setter 
+@NoArgsConstructor 
+@AllArgsConstructor
 @Builder
 @AllArgsConstructor
 @Entity
