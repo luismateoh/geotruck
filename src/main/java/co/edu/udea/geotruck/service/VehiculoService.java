@@ -61,9 +61,11 @@ public class VehiculoService {
         Vehiculo findVehiculo = findVehiculoOptional.orElseThrow(EntityNotFoundException::new);
 
         //get ubicacion
-
-        findVehiculo.setLatitud("121");
-        findVehiculo.setLongitud("121321");
+        UbicacionService ubicacionService = new UbicacionService();
+        List<String> ubicacion = ubicacionService.ubicacion(id);
+        System.out.println(ubicacion);
+        findVehiculo.setLatitud(ubicacion.get(0));
+        findVehiculo.setLongitud(ubicacion.get(1));
         return modelMapper.map(findVehiculo, VehiculoDto.class);
     }
 
