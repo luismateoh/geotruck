@@ -1,6 +1,8 @@
 package co.edu.udea.geotruck.service;
 
 
+import co.edu.udea.geotruck.dto.RolDto;
+import co.edu.udea.geotruck.entity.Rol;
 import co.edu.udea.geotruck.repository.RolRepository;
 import org.modelmapper.ModelMapper;
 import org.springframework.stereotype.Service;

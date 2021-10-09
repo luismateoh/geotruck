@@ -1,6 +1,8 @@
 package co.edu.udea.geotruck.controller;
 
 
+import co.edu.udea.geotruck.dto.CargaDto;
+import co.edu.udea.geotruck.service.CargaService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.annotation.Validated;

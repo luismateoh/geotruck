@@ -1,6 +1,7 @@
 package co.edu.udea.geotruck.controller;
 
 
+import co.edu.udea.geotruck.dto.RutaDto;
 import co.edu.udea.geotruck.service.RutaService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -26,7 +27,7 @@ public class RutaController {
     @PostMapping
     public ResponseEntity<RutaDto> create(@RequestBody @Valid RutaDto rutaDto) {
         RutaDto rutaCreate = rutaService.create(rutaDto);
-        return new ResponseEntity<RutaDto>(personCreate, null, HttpStatus.CREATED);
+        return new ResponseEntity<RutaDto>(rutaCreate, null, HttpStatus.CREATED);
     }
 
     @PutMapping

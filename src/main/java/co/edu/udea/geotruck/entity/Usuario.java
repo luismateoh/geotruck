@@ -8,10 +8,10 @@ import javax.persistence.*;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-@EqualsAndHashCode(exclude = {"nombre", "email","apellido","password"})
+@EqualsAndHashCode(exclude = {"nombre", "email", "apellido", "password"})
 @Entity
-@Table(name = "users")
-public class User {
+@Table(name = "usuarios")
+public class Usuario {
 
     @Id
     @GeneratedValue

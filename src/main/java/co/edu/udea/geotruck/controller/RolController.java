@@ -1,6 +1,7 @@
 package co.edu.udea.geotruck.controller;
 
 
+import co.edu.udea.geotruck.dto.RolDto;
 import co.edu.udea.geotruck.service.RolService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

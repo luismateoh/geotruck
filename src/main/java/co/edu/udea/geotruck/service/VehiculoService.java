@@ -1,6 +1,8 @@
 package co.edu.udea.geotruck.service;
 
 
+import co.edu.udea.geotruck.dto.VehiculoDto;
+import co.edu.udea.geotruck.entity.Vehiculo;
 import co.edu.udea.geotruck.repository.VehiculoRepository;
 import org.modelmapper.ModelMapper;
 import org.springframework.stereotype.Service;
@@ -40,7 +42,7 @@ public class VehiculoService {
     public VehiculoDto findById(Long id) {
         Optional<Vehiculo> findVehiculoOptional = vehiculoRepository.findById(id);
         Vehiculo findVehiculo = findVehiculoOptional.orElseThrow(EntityNotFoundException::new);
-        return modelMapper.map(findVehiculo, vehiculoDto.class);
+        return modelMapper.map(findVehiculo, VehiculoDto.class);
     }
 
     public void delete(Long id) {

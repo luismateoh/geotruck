@@ -6,8 +6,9 @@
 package co.edu.udea.geotruck.entity;
 
 import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 import javax.persistence.*;
 
@@ -15,15 +16,12 @@ import javax.persistence.*;
  *
  * @author JOAN
  */
-@Entity
-@Getter 
-@Setter 
-@NoArgsConstructor 
-@AllArgsConstructor
-@Builder
+@Getter
+@Setter
+@NoArgsConstructor
 @AllArgsConstructor
 @Entity
-@Table(name = "users")
+@Table(name = "rutas")
 public class Ruta {
     @Id
     @GeneratedValue
@@ -35,7 +33,4 @@ public class Ruta {
     @Column
     private String ciudadDestino;
 
-    public Ruta() {
-
-    }
 }

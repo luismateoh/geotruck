@@ -1,5 +1,7 @@
 package co.edu.udea.geotruck.service;
 
+import co.edu.udea.geotruck.dto.CargaDto;
+import co.edu.udea.geotruck.entity.Carga;
 import co.edu.udea.geotruck.repository.CargaRepository;
 import org.modelmapper.ModelMapper;
 import org.springframework.stereotype.Service;
