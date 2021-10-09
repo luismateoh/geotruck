@@ -13,40 +13,43 @@ public class UbicacionService {
 
     }
 
-    public List<String> ubicacion(Long id) {
+    public static List<String> ubicacion(Long id) {
         String latitud = "";
         String longitud = "";
 
         try {
             URL url = new URL("https://api.3geonames.org/?randomland=CO&json=1");
             BufferedReader bf = new BufferedReader(new InputStreamReader(url.openStream()));
+            int bandera = 0;
 
-            for (int i = 1; i <= 13; i++) {
-                System.out.println(i);
-                if (i == 12) {
-                    latitud = bf.readLine();
+            while (bandera == 0) {
+                latitud = bf.readLine();
+                String cadenaDondeBuscar = latitud;
+                String loQueQuieroBuscar = ("\"latt\"");
+
+                if (cadenaDondeBuscar.contains(loQueQuieroBuscar)) {
+                    String[] parts1 = latitud.split("\"latt\" : \"");
+                    latitud = parts1[1];
+                    parts1 = latitud.split("\"");
+                    latitud = parts1[0];
                     longitud = bf.readLine();
+                    String[] parts2 = longitud.split("\"longt\" : \"");
+                    longitud = parts2[1];
+                    parts2 = longitud.split("\"");
+                    longitud = parts2[0];
+                    bandera = 1;
+
                 }
-                bf.readLine();
-
             }
-
-            StringBuilder lat = new StringBuilder();
-            StringBuilder lon = new StringBuilder();
-            for (int i = 16; i < 24; i++) {
-                lat.append(latitud.charAt(i));
-                lon.append(longitud.charAt(i + 1));
-            }
-            latitud = lat.toString();
-            longitud = lon.toString();
-
 
         } catch (Exception e) {
         }
         List<String> geo = new ArrayList<>();
         geo.add(latitud);
         geo.add(longitud);
+
         return geo;
     }
+
 
 }

@@ -11,7 +11,6 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import javax.persistence.*;
-import java.util.List;
 
 /**
  *
@@ -34,6 +33,6 @@ public class Ruta {
     @Column
     private String ciudadDestino;
 
-    @OneToMany(mappedBy = "ruta")
-    private List<Vehiculo> vehiculos;
+    //  @OneToMany(mappedBy = "ruta")
+    // private List<Vehiculo> vehiculos;
 }
