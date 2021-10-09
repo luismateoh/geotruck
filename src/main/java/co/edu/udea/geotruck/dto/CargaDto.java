@@ -14,8 +14,11 @@ import javax.validation.constraints.Size;
 @NoArgsConstructor
 public class CargaDto {
 
-    private Long id;   
+    private Long id;
+
+    @Size(min = ValidatorConstants.MIN_SIZE_PESO, max = ValidatorConstants.MAX_SIZE_PESO, message = ValidatorConstants.BAD_SIZE_PESO_MESSSAGE)
     private double peso;
+    @Size(min = ValidatorConstants.MIN_SIZE_TYPE, max = ValidatorConstants.MAX_SIZE_TYPE, message = ValidatorConstants.BAD_SIZE_TYPE_MESSSAGE)
     private String tipo;    
     
 }

@@ -14,7 +14,10 @@ import javax.validation.constraints.Size;
 @NoArgsConstructor
 public class RutaDto {
 
+    @NotNull
+    @Size(min = ValidatorConstants.MIN_SIZE_DESTINATIONCITY, max = ValidatorConstants.MAX_SIZE_DESTINATIONCITY, message = ValidatorConstants.BAD_SIZE_DESTINATIONCITY_MESSSAGE)
     private String ciudadDestino;
+    @Size(min = ValidatorConstants.MIN_SIZE_ORIGINCITY, max = ValidatorConstants.MAX_SIZE_ORIGINCITY, message = ValidatorConstants.BAD_SIZE_ORIGINCITY_MESSSAGE)
     private String ciudadOrigen;
     private Long id;
   
