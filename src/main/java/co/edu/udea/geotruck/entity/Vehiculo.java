@@ -5,15 +5,19 @@
  */
 package co.edu.udea.geotruck.entity;
 
-import lombok.*;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 import javax.persistence.*;
 
 /**
  * @author JOAN
  */
-@Data
-@Builder
+@Getter
+@Setter
+@NoArgsConstructor
 @AllArgsConstructor
 @Entity
 @Table(name = "vehiculos")
@@ -47,7 +51,5 @@ public class Vehiculo {
     @Column
     private String longitud;
 
-    public Vehiculo() {
-    }
 
 }

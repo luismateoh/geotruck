@@ -1,9 +1,10 @@
 package co.edu.udea.geotruck.dto;
 
 
-
 import co.edu.udea.geotruck.constants.ValidatorConstants;
-import lombok.*;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Pattern;
@@ -12,7 +13,7 @@ import javax.validation.constraints.Size;
 @Getter
 @Setter
 @NoArgsConstructor
-public class UserDto {
+public class UsuarioDto {
 
     private Long id;
 
@@ -26,9 +27,10 @@ public class UserDto {
     private String password;
     @Size(min = ValidatorConstants.MIN_SIZE_NAME, max = ValidatorConstants.MAX_SIZE_NAME, message = ValidatorConstants.BAD_SIZE_NAME_MESSSAGE)
     private String nombre;
-    @Size(min = ValidatorConstants.MIN_SIZE_ID, max = ValidatorConstants.MIN_SIZE_ID, message = ValidatorConstants.BAD_SIZE_ID_MESSSAGE)
+
+    @NotNull
     private String identificacion;
-    @Size (min = ValidatorConstants.MIN_SIZE_LASTNAME, max = ValidatorConstants.MAX_SIZE_LASTNAME, message = ValidatorConstants.BAD_SIZE_LASTNAME_MESSSAGE)
+
     private String apellido;
 
 }

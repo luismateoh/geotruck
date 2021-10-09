@@ -6,8 +6,9 @@
 package co.edu.udea.geotruck.entity;
 
 import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 import javax.persistence.*;
 
@@ -16,8 +17,9 @@ import javax.persistence.*;
  * @author JOAN
  */
 
-@Data
-@Builder
+@Getter
+@Setter
+@NoArgsConstructor
 @AllArgsConstructor
 @Entity
 @Table(name = "cargas")
@@ -30,7 +32,4 @@ public class Carga {
     @Column
     private double peso;
 
-    public Carga() {
-
-    }
 }

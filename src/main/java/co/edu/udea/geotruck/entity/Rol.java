@@ -6,8 +6,9 @@
 package co.edu.udea.geotruck.entity;
 
 import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 import javax.persistence.*;
 
@@ -15,11 +16,12 @@ import javax.persistence.*;
  *
  * @author JOAN
  */
-@Data
-@Builder
+@Getter
+@Setter
+@NoArgsConstructor
 @AllArgsConstructor
 @Entity
-@Table(name = "cargas")
+@Table(name = "rol")
 public class Rol {
     @Id
     @GeneratedValue
@@ -29,7 +31,4 @@ public class Rol {
     @Column
     private String nameRol;
 
-    public Rol() {
-
-    }
 }
