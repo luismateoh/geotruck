@@ -30,6 +30,7 @@ dependencies {
 	implementation group: 'javax.validation', name: 'validation-api', version: '2.0.1.Final'
 	implementation group: 'org.modelmapper', name: 'modelmapper', version: '2.4.4'
 	implementation group: 'org.springdoc', name: 'springdoc-openapi-ui', version: '1.5.11'
+	implementation 'org.json:json:20171018'
 
 }
 

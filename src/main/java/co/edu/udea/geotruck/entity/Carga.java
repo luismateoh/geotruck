@@ -32,4 +32,6 @@ public class Carga {
     @Column
     private double peso;
 
+    @OneToOne(mappedBy = "carga")
+    private Vehiculo vehiculo;
 }

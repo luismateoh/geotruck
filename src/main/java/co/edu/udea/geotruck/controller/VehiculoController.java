@@ -46,6 +46,13 @@ public class VehiculoController {
         return ResponseEntity.ok(vehiculoService.findById(id));
     }
 
+    @Validated
+    @GetMapping("/geoloc/{id}")
+    public ResponseEntity<VehiculoDto> getUbicacion(
+            @PathVariable @NotNull @Valid Long id) {
+        return ResponseEntity.ok(vehiculoService.getUbicacion(id));
+    }
+
     @DeleteMapping("/{id}")
     public ResponseEntity<Void> delete(@PathVariable Long id) {
         vehiculoService.delete(id);

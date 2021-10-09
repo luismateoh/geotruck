@@ -11,6 +11,7 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import javax.persistence.*;
+import java.util.List;
 
 /**
  *
@@ -31,4 +32,6 @@ public class Rol {
     @Column
     private String nameRol;
 
+    @OneToMany(mappedBy = "rol")
+    private List<Usuario> usuarios;
 }

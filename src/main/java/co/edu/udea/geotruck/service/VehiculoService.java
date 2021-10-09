@@ -56,5 +56,15 @@ public class VehiculoService {
         return create(vehiculoDto);
     }
 
+    public VehiculoDto getUbicacion(Long id) {
+        Optional<Vehiculo> findVehiculoOptional = vehiculoRepository.findById(id);
+        Vehiculo findVehiculo = findVehiculoOptional.orElseThrow(EntityNotFoundException::new);
+
+        //get ubicacion
+
+        findVehiculo.setLatitud("121");
+        findVehiculo.setLongitud("121321");
+        return modelMapper.map(findVehiculo, VehiculoDto.class);
+    }
 
 }

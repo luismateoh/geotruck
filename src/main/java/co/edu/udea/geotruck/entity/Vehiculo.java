@@ -51,5 +51,15 @@ public class Vehiculo {
     @Column
     private String longitud;
 
+    @ManyToOne
+    @JoinColumn(name = "ruta_id")
+    private Ruta ruta;
 
+    @ManyToOne
+    @JoinColumn(name = "usuario_id")
+    private Usuario usuario;
+
+    @OneToOne
+    @JoinColumn(name = "carga_id")
+    private Carga carga;
 }

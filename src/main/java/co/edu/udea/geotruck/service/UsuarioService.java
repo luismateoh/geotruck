@@ -5,8 +5,6 @@ import co.edu.udea.geotruck.dto.UsuarioDto;
 import co.edu.udea.geotruck.entity.Usuario;
 import co.edu.udea.geotruck.repository.UsuarioRepository;
 import org.modelmapper.ModelMapper;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
 
 import javax.persistence.EntityNotFoundException;
@@ -16,8 +14,6 @@ import java.util.stream.Collectors;
 
 @Service
 public class UsuarioService {
-
-    private static final Logger LOGGER = LoggerFactory.getLogger(UsuarioService.class);
 
     private final UsuarioRepository usuarioRepository;
 

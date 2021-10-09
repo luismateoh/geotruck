@@ -3,6 +3,7 @@ package co.edu.udea.geotruck.entity;
 import lombok.*;
 
 import javax.persistence.*;
+import java.util.List;
 
 @Getter
 @Setter
@@ -32,4 +33,10 @@ public class Usuario {
     @Column
     private String apellido;
 
+    @OneToMany(mappedBy = "usuario")
+    private List<Vehiculo> vehiculos;
+
+    @ManyToOne
+    @JoinColumn(name = "rol_id")
+    private Rol rol;
 }
