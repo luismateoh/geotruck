@@ -7,7 +7,6 @@ import co.edu.udea.geotruck.repository.UserRepository;
 import org.modelmapper.ModelMapper;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import javax.persistence.EntityNotFoundException;
@@ -20,9 +19,9 @@ public class UserService {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(UserService.class);
 
-    private UserRepository userRepository;
+    private final UserRepository userRepository;
 
-    private ModelMapper modelMapper;
+    private final ModelMapper modelMapper;
 
 
     public UserService(UserRepository userRepository, ModelMapper modelMapper) {
@@ -31,19 +30,15 @@ public class UserService {
     }
 
     public UserDto create(UserDto userToCreateDto) {
-        LOGGER.debug("Begin create: personToCreateDto={}", userToCreateDto);
-
         User userToCreate = modelMapper.map(userToCreateDto, User.class);
         User result = userRepository.save(userToCreate);
         UserDto resultDTO = modelMapper.map(result, UserDto.class);
-
-        LOGGER.debug("End create: resultDTO={}", resultDTO);
         return resultDTO;
     }
 
     public List<UserDto> findAll() {
-        List<User> listPeople = (List<User>) userRepository.findAll();
-        return listPeople.stream()
+        List<User> listItems = (List<User>) userRepository.findAll();
+        return listItems.stream()
                 .map(user -> modelMapper.map(user, UserDto.class))
                 .collect(Collectors.toList());
     }
